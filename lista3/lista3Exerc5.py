@@ -1,3 +1,7 @@
+import os
+
+os.system('cls')
+
 numero = 233
 print(numero)
 

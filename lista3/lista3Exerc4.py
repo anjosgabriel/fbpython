@@ -1,3 +1,7 @@
+import os
+
+os.system('cls')
+
 numero = 0
 multiplicacao = 0
 

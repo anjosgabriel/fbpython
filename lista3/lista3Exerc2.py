@@ -1,8 +1,12 @@
-total_numeros = 0
+import os
 
-for x in range(1, 501):
-    if x % 2 == 1 and x % 3 == 0:
-        print(x)
-        total_numeros += x
+os.system('cls')
 
-print("O Total:", total_numeros)
+valores = range(1,501,3)
+total = 0
+for valor in valores: 
+    if (valor%2 == 1):
+        print(valor)
+    total += valor 
+
+print(f"Somatorio de numeros impares multiplos de 3 entre 1 e 500 é {total}")

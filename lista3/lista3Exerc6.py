@@ -1,15 +1,14 @@
-numero = 0
-soma = 0
+import os
 
-print("Digite um numero:")
-limite = int(input())
+os.system('cls')
 
+contador = 1
+total = 0
+numero = int(input("Digite um numero entre 2 e 9 :"))
 while True:
-    numero += 1
-    soma += numero
-    print(numero, end="")
-    if numero == limite:
-        break
-    print("+", end="")
+    print(contador,end="+")
+    contador=contador+1
+    if contador > numero :
+        break 
 
-print(" =", soma)
+print('\nfim de programa')
