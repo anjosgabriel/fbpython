@@ -1,23 +1,27 @@
-salarios = []
-num_filhos = []
+qtde = int(input("Digite o numero de habitantes : "))
+HABITANTES = range(qtde)
+salario = 0.00
+total_salario = 0.00
+numero_filhos = 0.00
+total_filhos = 0.00
+media_salarial = 0.00
+media_filhos = 0.00
+percentual_salario_1000 = 0.00
+contador_salario_1000 = 0
 
-for i in range(3):
-    salario = float(input("Digite o salário do habitante {}: R$ ".format(i+1)))
-    num_filho = int(input("Digite o número de filhos do habitante {}: ".format(i+1)))
-    salarios.append(salario)
-    num_filhos.append(num_filho)
+for pessoa in HABITANTES:
+    print("Habitante ",(pessoa+1))
+    salario = float(input("Digite o salario : "))
+    numero_filhos = int(input("Digite o numero de filhos : "))
 
-media_salario = sum(salarios) / len(salarios)
+    total_salario = total_salario + salario
+    total_filhos = total_filhos + numero_filhos
 
-media_filhos = sum(num_filhos) / len(num_filhos)
+media_salarial = total_salario / qtde
+media_filhos = total_filhos / qtde
 
-maior_salario = max(salarios)
+print(f"Total de salarios R$ {total_salario}")
+print(f"Media salarial R$ {media_salarial}")
+print(f"Total de filhos R$ {media_filhos}")
 
-pessoas_ate_100 = sum(1 for salario in salarios if salario <= 100)
-percentual_ate_100 = (pessoas_ate_100 / len(salarios)) * 100
-
-print("\nResultados:")
-print("Média do salário da população: R$ {:.2f}".format(media_salario))
-print("Média do número de filhos: {:.2f}".format(media_filhos))
-print("Maior salário: R$ {:.2f}".format(maior_salario))
-print("Percentual de pessoas com salário até R$100,00: {:.2f}%".format(percentual_ate_100))
+print("Fim de programa")
