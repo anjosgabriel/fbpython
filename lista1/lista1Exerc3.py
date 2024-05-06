@@ -1,3 +1,7 @@
+import os
+
+os.system('cls')
+
 tempo_segundos = int(input("Digite o tempo em segundos : "))
 
 horas = tempo_segundos // 3600 

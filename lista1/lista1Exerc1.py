@@ -1,4 +1,8 @@
-anos = int(input('Digite os anos : '))
+import os
+
+os.system('cls')
+
+nos = int(input('Digite os anos : '))
 meses = int(input('Digite os meses [1-12] : '))
 dias = int(input('Digite os dias [1-31] : '))
 

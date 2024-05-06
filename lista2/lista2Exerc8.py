@@ -1,3 +1,7 @@
+import os
+
+os.system('cls')
+
 n = 0.00
 
 print("Digite um número: ")

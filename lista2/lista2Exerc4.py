@@ -1,19 +1,20 @@
-def inicio():
-    numero = int(input("Digite um número: "))
+import os
 
-    if (numero % 2 == 0) and (numero > 0):
-        print("\nO número", numero, "é par e positivo.")
+os.system('cls')
 
-    elif (numero % 2 == 0) and (numero < 0):
-        print("\nO número", numero, "é par e negativo.")
+numero = int(input("Digite um número: "))
 
-    elif numero == 0:
-        print("\nO número", numero, "é neutro.")
+if (numero % 2 == 0) and (numero > 0):
+    print("\nO número", numero, "é par e positivo.")
 
-    elif (numero % 2 == 1) and (numero > 0):
-        print("\nO número", numero, "é ímpar e positivo.")
+elif (numero % 2 == 0) and (numero < 0):
+    print("\nO número", numero, "é par e negativo.")
 
-    else:
-        print("\nO número", numero, "é ímpar e negativo.")
+elif numero == 0:
+    print("\nO número", numero, "é neutro.")
 
-inicio()
+elif (numero % 2 == 1) and (numero > 0):
+    print("\nO número", numero, "é ímpar e positivo.")
+
+else:
+    print("\nO número", numero, "é ímpar e negativo.")
