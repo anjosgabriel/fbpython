@@ -9,8 +9,27 @@ def cabeca():
 
 
 vendas_df = pd.read_excel("Vendas.xlsx")
-pd.set_option('display.max_columns',None)
+pd.set_option('display.max_columns',None) #mostra todas as colunas
 
 #faturamento por loja
 cabeca()
-print(vendas_df)
+faturamento_loja = vendas_df[['ID Loja', 'Valor Final']].groupby('ID Loja').sum()
+print(faturamento_loja)
+
+
+#quantidades de produtos por loja
+quantidade_loja = vendas_df[['ID Loja', 'Quantidade']].groupby('ID Loja').sum()
+
+
+#ticket medio faturamento loja / quantidade por loja
+ticket_medio = (faturamento_loja['Valor Final'] /quantidade_loja['Quantidade']).to_frame()
+
+
+#teste
+print("-"*60)
+print(quantidade_loja)
+
+print("-"*60)
+print(ticket_medio)
+
+

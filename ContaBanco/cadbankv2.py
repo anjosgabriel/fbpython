@@ -163,7 +163,7 @@ with conexao:
                     break
                 if sub_opcao_menu =='1':
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "corrente"
+                        TABLE_NAME = "Corrente"
                         numero = int(input("Digite o numero da conta : "))
                         cpf = input("Digita o cpf do cliente da conta :")
                         dia_aniversario_conta = int(input("Digite o dia de aniversario da conta : "))
@@ -186,7 +186,7 @@ with conexao:
                     novo_cpf = input("Digite o novo CPF: ")
                     novo_dia_aniversario = int(input("Digite o novo dia de aniversário da conta: "))
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "corrente"
+                        TABLE_NAME = "Corrente"
                         sql = f'UPDATE {TABLE_NAME} SET cpf=%s, diaAniversarioPoupanca=%s WHERE numero=%s'
                         cursor.execute(sql, (novo_cpf, novo_dia_aniversario, numero_conta))
                     conexao.commit()
@@ -196,7 +196,7 @@ with conexao:
                 elif sub_opcao_menu == '3':  
                     numero_conta = int(input("Digite o número da conta que deseja apagar: "))
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "corrente"
+                        TABLE_NAME = "Corrente"
                         sql = f'DELETE FROM {TABLE_NAME} WHERE numero=%s'
                         cursor.execute(sql, (numero_conta,))
                     conexao.commit()
@@ -211,7 +211,7 @@ with conexao:
                     numero_conta = int(input("Digite o número da conta: "))
                     valor = float(input("Digite o valor: "))
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "corrente"  
+                        TABLE_NAME = "Corrente"  
                         if movimento == '1':  
                             sql = f'UPDATE {TABLE_NAME} SET saldo=saldo+%s WHERE numero=%s'
                         elif movimento == '2':  
@@ -245,7 +245,7 @@ with conexao:
                     break
                 if sub_opcao_menu =='1':
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "especial"
+                        TABLE_NAME = "Especial"
                         numero = int(input("Digite o numero da conta : "))
                         cpf = input("Digita o cpf do cliente da conta :")
                         dia_aniversario_conta = int(input("Digite o dia de aniversario da conta : "))
@@ -268,7 +268,7 @@ with conexao:
                     novo_cpf = input("Digite o novo CPF: ")
                     novo_dia_aniversario = int(input("Digite o novo dia de aniversário da conta: "))
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "especial"
+                        TABLE_NAME = "Especial"
                         sql = f'UPDATE {TABLE_NAME} SET cpf=%s, diaAniversarioPoupanca=%s WHERE numero=%s'
                         cursor.execute(sql, (novo_cpf, novo_dia_aniversario, numero_conta))
                     conexao.commit()
@@ -278,7 +278,7 @@ with conexao:
                 elif sub_opcao_menu == '3':  
                     numero_conta = int(input("Digite o número da conta que deseja apagar: "))
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "especial"
+                        TABLE_NAME = "Especial"
                         sql = f'DELETE FROM {TABLE_NAME} WHERE numero=%s'
                         cursor.execute(sql, (numero_conta,))
                     conexao.commit()
@@ -293,7 +293,7 @@ with conexao:
                     numero_conta = int(input("Digite o número da conta: "))
                     valor = float(input("Digite o valor: "))
                     with conexao.cursor() as cursor:
-                        TABLE_NAME = "especial"  
+                        TABLE_NAME = "Especial"  
                         if movimento == '1':  
                             sql = f'UPDATE {TABLE_NAME} SET saldo=saldo+%s WHERE numero=%s'
                         elif movimento == '2':  
