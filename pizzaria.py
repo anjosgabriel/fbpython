@@ -3,17 +3,24 @@ import os
 os.system('cls')
 
 def menu_principal():
-    print("Olá, tudo bem?")
-    print("\nDIGITE:")
-    print("1 - Compra pizza")
-    print("2 - Sair")
+    print("Olá, tudo bem?\n")
+    print("Seja Bem-Vindo à PIZZARIA DO GABRIEL!!!\n")
+    print("Digite:\n")
+    print("1 - Comprar pizza")
+    print("2 - Sair\n")
     print("-" * 50)
 def menu_pizzas():
     print("\nLista")
-    print("1 - Mussarela - R$ 50,00")
-    print("2 - Calabresa - R$ 50,00")
-    print("3 - Frango c/ Catupiry - R$ 50,00")
-    print("4 - Voltar ao Menu")
+    print("1 - Mussarela - R$ 39,90")
+    print("2 - Calabresa - R$ 41,50")
+    print("3 - Frango - R$ 41,50")
+    print("4 - Frango c/ Catupiry - R$ 43,50")
+    print("5 - Atum - R$ 43,50")
+    print("6 - Marguerita - R$ 43,50")
+    print("7 - 2 Queijos - R$ 45,00")
+    print("8 - Peperoni - R$ 45,00")
+    print("9 - Chocolate - R$ 50,00")
+    print("10 - Voltar ao Menu")
     print("-" * 50)
 def obter_endereco():
     endereco = input("\nQual seu endereço? ")
@@ -29,10 +36,10 @@ def main():
                 menu_pizzas()
                 escolha_pizza = input("\nEscolha sua pizza: ")
 
-                if escolha_pizza in ['1', '2', '3']:
+                if escolha_pizza in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
                     obter_endereco()
                     break
-                elif escolha_pizza == '4':
+                elif escolha_pizza == '10':
                     break
                 else:
                     print("\nOpção inválida, tente novamente.")
